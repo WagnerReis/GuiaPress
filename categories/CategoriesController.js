@@ -9,7 +9,6 @@ router.get("/admin/categories/new", (req, res) => {
 
 router.post("/categories/save",(req, res) => {
   var title = req.body.title;
-  console.log(title)
   if(title != undefined) {
     Category.create({
       title: title,
@@ -21,6 +20,10 @@ router.post("/categories/save",(req, res) => {
   }else {
     res.redirect("/admin/categories/new");
   }
+});
+
+router.get("/admin/categories", (req, res) => {
+  res.render("admin/categories/index");
 });
 
 module.exports = router;
