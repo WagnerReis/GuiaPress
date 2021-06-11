@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Category = require("../categories/Category");
+const Article = require("./Article");
+const slugify = require("slugify");
 
 router.get("/articles",(req, res) => {
   res.send("Rota de artigos");
