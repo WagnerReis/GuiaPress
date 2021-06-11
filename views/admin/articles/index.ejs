@@ -9,15 +9,21 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <td>Id</td>
-        <td>Título</td>
-        <td>Slug</td>
-        <td>Category</td>
-        <td>Ações</td>
+        <th>Id</th>
+        <th>Título</th>
+        <th>Slug</th>
+        <th>Categoria</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
-      
+      <% articles.forEach(article => { %>
+        <td><%= article.id %></td>
+        <td><%= article.title %></td>
+        <td><%= article.slug %></td>
+        <td><%= article.categoryId %></td>
+        <td>Ações</td>
+      <% }) %>  
     </tbody>
   </table>
 </div>
