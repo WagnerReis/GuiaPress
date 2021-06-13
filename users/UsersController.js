@@ -10,5 +10,11 @@ router.get("/admin/users/create", (req, res) => {
   res.render("admin/users/create");
 });
 
+router.post("/users/create", (req, res) => {
+  var { email, password } = req.body;
+
+  res.json({ email, password });
+});
+
 
 module.exports = router;
